@@ -1,0 +1,105 @@
+@media only screen and (min-width: 480px){
+  .card-container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    
+  }
+  
+  .title-container {
+    color: white;
+    font-size: 18px;
+  }
+  
+  .button1 {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .title-container a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .button1:hover, .title-container a:hover {
+    opacity: 0.7;
+    color: red;
+  }
+   /* background-video */
+.backgroundVideo{
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  opacity: 0.3;
+  height: 500px;
+  
+}
+   /* background-video Coming to America */
+.backgroundVideoAmerica{
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  height: 650px;
+  
+}
+.linear-gradient{
+  background: linear-gradient(to right, rgb(0, 0, 0, 0.9), rgba(8, 8, 8, 0.9));
+}
+.parent-container-cards{
+  display:flex;
+}
+}
+
+
+@media only screen and (max-width: 600px)
+{
+  .modalContainer
+  {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .parent-container-cards{
+    display: block;
+  }
+
+   /* background-video */
+.backgroundVideo{
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  opacity: 0.3;
+  height: 400px;
+  
+}
+.backgroundVideoAmerica{
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  height: 400px;
+}
+.linear-gradient{
+  background: linear-gradient(to right, rgb(0, 0, 0, 0.9), rgba(8, 8, 8, 0.9));
+}
+}

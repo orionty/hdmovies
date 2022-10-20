@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 480px)
+{
+  /* Contact Section */
+.parent-container{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: flex;
+  height: 750px;
+  width: 60%;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.child-container-one{
+  flex: 80%;
+  background-color: rgb(250, 241, 242);
+ text-align: center; 
+ padding: 30px;
+}
+.child-container-two{
+  flex: 20%;
+  background: linear-gradient(to right, rgb(0, 0, 0, 0.9), rgba(8, 8, 8, 0.9)),url('../assets/june.webp');
+  color: white;
+  padding-top: 100px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+.text {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color  */
+.submit{
+  background-color: rgb(1, 4, 29);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a navy color */
+.submit:hover {
+  background-color: rgb(1, 4, 29);
+}
+
+/* background-video */
+.background-video{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  margin: -8px;
+  
+}
+.video-center{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 300px;
+  
+ 
+}
+
+
+
+}
+
+
+@media only screen and (max-width: 600px)
+{
+/* Contact Section */
+.parent-container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: flex;
+    height: 750px;
+    width: 100%;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  }
+  .modalContainer
+  {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .child-container-one{
+    flex: 80%;
+    background-color: rgb(250, 241, 242);
+   text-align: center; 
+   padding: 30px;
+  }
+  .child-container-two{
+    flex: 20%;
+    background: linear-gradient(to right, rgb(0, 0, 0, 0.9), rgba(8, 8, 8, 0.9)),url('../assets/june.webp');
+    color: white;
+    padding-top: 100px;
+  }
+
+  /* Style inputs with type="text", select elements and textareas */
+.text {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color  */
+  .submit{
+    background-color: rgb(1, 4, 29);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a navy color */
+  .submit:hover {
+    background-color: rgb(1, 4, 29);
+  }
+
+  /* background-video */
+.background-video{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    
+    
+  }
+  .video-center{
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 300px;
+    
+   
+  }
+
+  
+  
+}
+
+

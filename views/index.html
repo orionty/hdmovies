@@ -1,0 +1,1615 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HD MOVIES</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon2.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/716f78bc78.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+
+ <!--Navigation Bar-->
+ <section  id="top">
+  <nav class="navbar navbar-expand-lg navbar-dark p-4 navbarBgParent" >
+      <div class="container-fluid">
+        <a class="navbar-brand p-2 fw-bold" href="/" style="background-color: red;color: white; border-radius: 10px;">HD MOVIES</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active navbarBg" aria-current="page" href="/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              
+              <div class="dropdownGenre">
+              
+                <a class="nav-link active navbarBg ">Genre</a>
+                <div class="dropdown-content">
+                  <a style="cursor: pointer; color: white;" 
+                  onclick="document.getElementById('not-action').style.display='none',
+                  document.getElementById('not-action1').style.display='none'
+                   ,document.getElementById('action').style.display='block'">Action</a>
+                  
+                    <a href="#">Animation</a>
+                    <a href="#">Crime</a>
+                    <a href="#">Drama</a>
+                    <a href="#">Documentary</a>
+                    <a href="#">Fantasy</a>
+                    <a href="#">Mystery</a>
+                    <a href="#">Sci-Fi</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              
+              <div class="dropdownGenre">
+              
+                <a class="nav-link active navbarBg ">Country</a>
+                <div class="dropdown-content">
+                  <a href="#">Australia</a>
+                  <a href="#">Austria</a>
+                  <a href="#">Belgium</a>
+                  <a href="#">Brazil</a>
+                  <a href="#">Canada</a>
+                  <a href="#">China</a>
+                  <a href="#">Germany</a>
+                  <a href="/Ghanaian_movies">Ghana</a>
+                  <a href="#">Spain</a>
+                  <a href="#">United Kingdom</a>
+                  <a href="#">United States</a>
+                </div>
+              </div>
+            </li>
+            
+      
+            <li class="nav-item">
+              <a class="nav-link active navbarBg" aria-current="page" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active navbarBg" aria-current="page" href="/about">About</a>
+            </li>
+            
+          </ul>
+         
+          <form class="d-flex mt-2">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-danger" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <i class="fa-solid fa-user ms-3 me-2  text-light" style="margin-top: 12px;"></i><a class="text-decoration-none text-light me-3 mt-2 " 
+            onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;">Login/Register</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+</section>
+
+
+<!-- Login Modal -->
+<div id="id01" class="modal modalContainer">
+  
+  <form class="modal-content animate" >
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p style="font-size: 30px;">Login</p>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Account</b></label>
+      <input type="text" placeholder="Username or Email" name="uname"  class="inputLogin" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter password" name="psw" class="inputLogin" required>
+        
+      <button type="submit" class="button">Login</button>
+      <label>
+        <input type="checkbox"  name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="containerdown" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <p>Don't have an account? <span style="color:rgb(25, 154, 219) ; cursor: pointer; width: auto;" onclick="document.getElementById('id02').style.display='block' ,document.getElementById('id01').style.display='none'" >Register</span></p>
+      <span class="psw" onclick="document.getElementById('id03').style.display='block',document.getElementById('id01').style.display='none'" style="cursor: pointer;">Forgot <a style="color:rgb(25, 154, 219) ; cursor: pointer; width: auto;">password?</a></span>
+    </div>
+  </form>
+</div>
+<!-- forgot password modal -->
+<div id="id03" class="modal modalContainer">
+  
+  <form class="modal-content animate" >
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p style="font-size: 30px;">Forgot Password</p>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Account</b></label>
+      <input type="text" placeholder="Username or Email" name="uname"  class="inputLogin" required>
+
+      <label for="psw"><b>Old password</b></label>
+      <input type="password" placeholder="Enter password" name="psw" class="inputLogin" required>
+
+      <label for="psw"><b>New password</b></label>
+      <input type="password" placeholder="Enter password" name="psw" class="inputLogin" required>
+        
+      <button type="submit" class="button">Submit</button>
+      <label>
+        <input type="checkbox"  name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="containerdown" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+      <p style="color:rgb(25, 154, 219) ; cursor: pointer; width: auto;" onclick="document.getElementById('id03').style.display='none' ,document.getElementById('id01').style.display='block'" >Login</p>
+      
+    </div>
+  </form>
+</div>
+
+<!-- Register Modal -->
+<div id="id02" class="modal2 modalContainer">
+ 
+  <form class="modal-content2">
+    <div class="container2">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close Modal">&times;</span>
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Username</b></label>
+      <input type="text" placeholder="Enter username" name="uname" class="inputSignup" required>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter email" name="email" class="inputSignup" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter password" name="psw"  class="inputSignup" required>
+
+      <label for="psw-repeat"><b>Repeat password</b></label>
+      <input type="password" placeholder="Repeat password" name="psw-repeat"  class="inputSignup" required>
+      
+
+      <p>Have an account? <span style="color:rgb(25, 154, 219) ; cursor: pointer; width: auto;"
+         onclick="document.getElementById('id02').style.display='none' ,document.getElementById('id01').style.display='block'" >Login</span></p>
+
+      <div class="clearfix2">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2" >Cancel</button>
+        <button type="submit" class="signupbtn button2">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+ 
+
+<!-- Carousel -->
+<section id="not-action1">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+  
+      <div class="carousel-inner">
+          <!-- slide 1 -->
+      <div class="carousel-item active">
+          <div class="hotelLoveBg"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <section class="container-fluid" style="margin: 0; padding: 0;">
+                <div class="bgCard1" style="position: relative;">
+                    <div class=" text-container container-fluid">
+                      <h1>Hotel Love</h1>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                          <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                          <li style="margin: 5px;">126 min</li>
+                          <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>6.30</li>
+                          <li style="margin: 5px;">Drama</li>
+                          
+                      </ul>
+                      <p style="opacity: 0.8;" onmouseout="document.getElementById('over').style.color ='white'" onmouseover="document.getElementById('over').style.color ='yellow'" id="over">A story about the Adventure of an innocent village girl in the city where she had to work as a
+                         hotel attendant, her life took a new turn when the hotel owner... 
+                      </p>
+                      <div style="display: flex; ">
+                          <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/hotel_love" class="text-decoration-none text-light">Watch Now</a> </button>
+                          <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                      </div>
+                    </div>
+          
+                </div>
+            </section>
+      </div>
+    </div>
+  
+    <!-- slide 2 -->
+    <div class="carousel-item ">
+      <div class="awayBusBg"></div>
+      <div class="carousel-caption d-none d-md-block">
+        <section class="container-fluid" style="margin: 0; padding: 0;">
+            <div class="bgCard1" style="position: relative;">
+                <div class=" text-container container-fluid">
+                  <h1>Away Bus</h1>
+                  <ul style="list-style-type: none; display: flex;align-items: center; ">
+                      <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                      <li style="margin: 5px;">146 min</li>
+                      <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>7.30</li>
+                      <li style="margin: 5px;">Comedy | Drama</li>
+                      
+                  </ul>
+                  <p style="opacity: 0.8;" onmouseout="document.getElementById('Hover1').style.color ='white'" onmouseover="document.getElementById('Hover1').style.color ='yellow'" id="Hover1">Away Bus - Two sisters need to raise money to save their dying mother. 
+                    All attempts to help fail, so they decide to do the unthinkable, a highway bus robbery.
+                  </p>
+                  <div style="display: flex; ">
+                      <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/away_bus" class="text-decoration-none text-light">Watch Now</a> </button>
+                      <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                  </div>
+                </div>
+      
+            </div>
+        </section>
+  </div>
+  </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item ">
+          <div class="comingAmBg"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <section class="container-fluid" style="margin: 0; padding: 0;">
+                <div class="bgCard1" style="position: relative;">
+                    <div class=" text-container container-fluid">
+                      <h1>Coming 2 America</h1>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                          <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                          <li style="margin: 5px;">149 min</li>
+                          <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>6.30</li>
+                          <li style="margin: 5px;">Comedy</li>
+                          
+                      </ul>
+                      <p style="opacity: 0.8;" onmouseout="document.getElementById('Hover2').style.color ='white'" onmouseover="document.getElementById('Hover2').style.color ='yellow'" id="Hover2">Sensing that trouble is brewing in the African kingdom of Zamunda, three long and prosperous decades after Prince Akeem and Lisa McDowell's opulent wedding in Coming to America (1988), King Jaffe Joffer and Semmi drop a bombshell. As a result, with three lovely daughters and no sons, it seems that Prince Akeem is with his back to the wall, as General Izzi, the megalomaniac despot of the neighbouring country of Nexdoria, dreams of seizing power through a political marriage of convenience. Now, newly crowned King Akeem and his trusted confidante, Semmi, have to return where it all began, the bustling borough of Queens, New York, to retrieve Lavelle: the illegitimate son unsuspecting Akeem never knew existed. 
+                          Can the prince of Zamunda restore peace and stability in less than a week? 
+                      </p>
+                      <div style="display: flex; ">
+                          <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/coming_to_america" class="text-decoration-none text-light">Watch Now</a> </button>
+                          <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                      </div>
+                    </div>
+          
+                </div>
+            </section>
+      </div>
+    </div>
+    <!-- slide 4 -->
+    <div class="carousel-item">
+      <div class="blackWidowBg"></div>
+      <div class="carousel-caption d-none d-md-block">
+        <section class="container-fluid" style="margin: 0; padding: 0;">
+            <div class="bgCard1" style="position: relative;">
+                <div class=" text-container container-fluid">
+                  <h1>Black Widow</h1>
+                  <ul style="list-style-type: none; display: flex;align-items: center; ">
+                      <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                      <li style="margin: 5px;">134 min</li>
+                      <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.20</li>
+                      <li style="margin: 5px;">Sci-Fi</li>
+                      <li style="margin: 5px;">Adventure</li>
+                      <li style="margin: 5px;">Action</li>
+                  </ul>
+                  <p style="opacity: 0.8;" onmouseout="document.getElementById('Hover3').style.color ='white'" onmouseover="document.getElementById('Hover3').style.color ='yellow'" id="Hover3">In Marvel Studios' action-packed spy thriller "Black Widow,"
+                       Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.
+                  </p>
+                  <div style="display: flex; ">
+                      <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/black_widow" class="text-decoration-none text-light">Watch Now</a></button>
+                      <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                  </div>
+                </div>
+      
+            </div>
+        </section>
+  </div>
+  </div>
+  <!-- slide 5 -->
+  <div class="carousel-item ">
+      <div class="matrixBg"></div>
+    <div class="carousel-caption d-none d-md-block">
+      <section class="container-fluid" style="margin: 0; padding: 0;">
+          <div class="bgCard1" style="position: relative;">
+              <div class=" text-container container-fluid">
+                <h1>The Matrix Resurrections</h1>
+                <ul style="list-style-type: none; display: flex; align-items: center;">
+                    <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">4K</li>
+                    <li style="margin: 5px;">148 min</li>
+                    <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.20</li>
+                    <li style="margin: 5px;">Sci-Fi</li>
+                    <li style="margin: 5px;">Action</li>
+                </ul>
+                <p style="opacity: 0.8;" onmouseout="document.getElementById('Hover4').style.color ='white'" onmouseover="document.getElementById('Hover4').style.color ='yellow'" id="Hover4">Return to a world of two realities: one, everyday life, the other, what lies behind it. To find out if his reality is a
+                construct, to truly know himself, Mr.Anderson will have to choose to follow the white rabbit once more.
+                </p>
+                <div style="display: flex; ">
+                    <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/matrix_resurrections" class="text-decoration-none text-light">Watch Now</a></button>
+                    <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                </div>
+              </div>
+    
+          </div>
+      </section>
+    </div>
+  </div>
+  <!-- slide 6 -->
+  <div class="carousel-item">
+      <div class="f9Bg"></div>
+      <div class="carousel-caption d-none d-md-block">
+        <section class="container-fluid" style="margin: 0; padding: 0;">
+            <div class="bgCard1" style="position: relative;">
+                <div class=" text-container container-fluid">
+                  <h1>Fast and Furious 9</h1>
+                  <ul style="list-style-type: none; display: flex;align-items: center; ">
+                      <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">4K</li>
+                      <li style="margin: 5px;">143 min</li>
+                      <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>7.50</li>
+                      <li style="margin: 5px;">Sci-Fi</li>
+                      <li style="margin: 5px;">Action</li>
+                      <li style="margin: 5px;">Crime</li>
+                  </ul>
+                  <p style="opacity: 0.8;" onmouseout="document.getElementById('Hover5').style.color ='white'" onmouseover="document.getElementById('Hover5').style.color ='yellow'" id="Hover5">Dom and the crew must take on an international terrorist who turns out to be Dom and Mia's estranged brother.
+                  </p>
+                  <div style="display: flex; ">
+                      <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/fast_and_furious" class="text-decoration-none text-light">Watch Now</a></button>
+                      <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                  </div>
+                </div>
+      
+            </div>
+        </section>
+  </div>
+  </div>
+  
+       
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+  <!-- Carousel -->
+
+</section>
+
+<br>
+<!-- Cards -->
+<!-- movie quality section -->
+<section class="container-fluid">
+    <div style="display: flex;" class="movieQuality">
+        <a href="#" style="text-decoration: none; color: white;" class="btn btn-danger m-2">All Movies</a>
+        <a href="#" style="text-decoration: none;color: white;" class="btn btn-dark m-2">4K</a>
+        <a href="#" style="text-decoration: none; color: white;" class="btn btn-dark m-2">HD </a>
+        <a href="#" style="text-decoration: none; color: white;" class="btn btn-dark m-2">3D </a>
+        <a href="#" style="text-decoration: none; color: white;" class="btn btn-dark m-2">2D </a>
+    </div>
+</section>
+
+<br>
+<!-- flex container cards -->
+<section id="not-action" class="container-fluid">
+  <a style="color: white; opacity: 0.5; text-decoration: none;" class="recommend">Recommended</a>
+<br><br>
+  <section >
+      <!-- parent-container -->
+      <div class="parent-flex-container">
+          <!-- child container -->
+          <div class="child-flex-container toolText" >  
+              <div class="card  card-container" >
+                  <img src="./assets/keteke.jpg" class="imgHeight card-image-top " alt="Keteke" >
+                  <div class="card-body ">
+                      <h5 class="card-title">Keteke</h5>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                  
+                        <div>
+                          <p>2017</p>
+                          </div>
+                     
+                        <div><p>148 min</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tooltipText">
+                  <p style="font-size: 25px;">Keteke</p>
+                  <ul style="list-style-type: none; display: flex;align-items: center; ">
+                    <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                    <li style="margin: 5px;">98 min</li>
+                    <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>6.20</li>
+                    <li style="margin: 5px;">Drama</li>
+                    <li style="margin: 5px;">2022</li>
+                    
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis explicabo commodi quam iusto. Ducimus architecto repudiandae rem blanditiis ex?</p>
+                   <div style="display: flex; ">
+                    <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/keteke" class="text-decoration-none text-light">Watch Now</a></button>
+                    <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                </div>
+                  
+                </div>
+            </div>
+          <!-- child-container -->
+  
+          <div class="child-flex-container toolText">
+              <div class="card  card-container " >
+                  <img src="./assets/nipa-nye.jpg" class="imgHeight card-image-top" alt="Nipa Nye 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Nipa Nye 2</h5>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                  
+                        <div>
+                          <p>2019</p>
+                          </div>
+                        <div><p>98 min</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tooltipText">
+                  <p style="font-size: 25px;">Nipa Nye 2</p>
+                  <ul style="list-style-type: none; display: flex;align-items: center; ">
+                    <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                    <li style="margin: 5px;">98 min</li>
+                    <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>6.20</li>
+                    <li style="margin: 5px;">Drama</li>
+                    <li style="margin: 5px;">2022</li>
+                    
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste id facilis soluta at suscipit deleniti cupiditate enim. Libero, culpa? Unde!</p>
+                   <div style="display: flex; ">
+                    <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/nipa_nye" class="text-decoration-none text-light">Watch Now</a></button>
+                    <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                </div>
+                  
+                </div>
+            </div>
+  
+  
+            <div class="child-flex-container toolText">
+              <div class="card card-container " >
+                  <img src="./assets/aloevera.jpg" class="imgHeight card-image-top" alt="Aloe Vera" >
+                  <div class="card-body">
+                      <h5 class="card-title">Aloe Vera</h5>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                  
+                        <div>
+                          <p>2018</p>
+                          </div>
+                        <div><p>48 min</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tooltipText">
+                  <p style="font-size: 25px;">Aloe Vera</p>
+                  <ul style="list-style-type: none; display: flex;align-items: center; ">
+                    <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                    <li style="margin: 5px;">48 min</li>
+                    <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.20</li>
+                    <li style="margin: 5px;">Drama</li>
+                    <li style="margin: 5px;">2020</li>
+                    
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio suscipit quidem nemo, vel aperiam iure sequi unde laudantium nisi.</p>
+                   <div style="display: flex; ">
+                    <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/aloe_vera" class="text-decoration-none text-light">Watch Now</a></button>
+                    <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                </div>
+                  
+                </div>
+            </div>
+  
+            <div class="child-flex-container toolText">
+              <div class="card card-container " >
+                  <img src="./assets/jupiter.jpg" class="imgHeight card-image-top" alt="Spider man no way home">
+                  <div class="card-body">
+                      <h5 class="card-title">Jupiter Ascending</h5>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                  
+                        <div>
+                          <p>2016</p>
+                          </div>
+                        <div><p>120 min</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tooltipText">
+                  <p style="font-size: 25px;">Jupiter Ascending</p>
+                  <ul style="list-style-type: none; display: flex;align-items: center; ">
+                    <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                    <li style="margin: 5px;">120 min</li>
+                    <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>6.20</li>
+                    <li style="margin: 5px;">Action</li>
+                    <li style="margin: 5px;">2016</li>
+                    
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptas laboriosam recusandae praesentium ex magnam nulla eaque ducimus provident animi!</p>
+                   <div style="display: flex; ">
+                    <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/jupiter_ascending" class="text-decoration-none text-light">Watch Now</a></button>
+                    <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                </div>
+                  
+                </div>
+            </div>
+  
+  
+            <div class="child-flex-container toolText">
+              <div class="card card-container " >
+                  <img src="./assets/money-heist.jpg" class="imgHeight card-image-top" alt="Money Heist">
+                  <div class="card-body">
+                      <h5 class="card-title">Money Heist</h5>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                  
+                        <div>
+                          <p>2018</p>
+                          </div>
+                        <div><p>58 min</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tooltipText">
+                  <p style="font-size: 25px;">Money Heist</p>
+                  <ul style="list-style-type: none; display: flex;align-items: center; ">
+                    <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">4K</li>
+                    <li style="margin: 5px;">58 min</li>
+                    <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.70</li>
+                    <li style="margin: 5px;">Action</li>
+                    <li style="margin: 5px;">2018</li>
+                    
+                </ul>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero accusamus provident iusto temporibus, commodi deserunt totam nesciunt fuga veniam quae.</p>
+                   <div style="display: flex; ">
+                    <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                    <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                </div>
+                  
+                </div>
+            </div> 
+  
+            <div class="child-flex-container toolText">
+              <div class="card card-container " >
+                  <img src="./assets/blacklist.jpg" class="imgHeight card-image-top" alt="Blacklist" >
+                  <div class="card-body">
+                      <h5 class="card-title">Blacklist</h5>
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                  
+                        <div>
+                          <p>2018</p>
+                          </div>
+                        <div><p>48 min</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tooltipTextlast">
+                  <p style="font-size: 25px;">Blacklist</p>
+                  <ul style="list-style-type: none; display: flex;align-items: center; ">
+                    <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                    <li style="margin: 5px;">48 min</li>
+                    <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.20</li>
+                    <li style="margin: 5px;">Action</li>
+                    <li style="margin: 5px;">2018</li>
+                    
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo accusamus excepturi aliquam itaque sequi impedit similique, nisi vel totam quos?</p>
+                   <div style="display: flex; ">
+                    <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                    <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                </div>
+                  
+                </div>
+            </div>
+      </div>
+      <!-- parent-container -->
+  </section>
+  
+  <!-- view all -->
+  <div class="container-fluid">
+      <a href="http://" class="view-all" >
+          View all<i class="fa-solid fa-arrow-right p-2"></i></a>
+    </div>
+    <br><br>
+  
+      <!-- Section for Latest Movies -->
+      <section>
+          <a style="color: white; opacity: 0.5; text-decoration: none;" class="recommend container-fluid">Latest Movies</a>
+         
+          <br><br>
+          <div class="parent-flex-container">
+              <div class="child-flex-container toolText">
+                <div class="card  card-container " >
+                    <img src="./assets/hotellove1.jpg" class="imgHeight card-image-top" alt="Hotel Love">
+                    <div class="card-body">
+                        <h5 class="card-title">Hotel Love</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2022</p>
+                            </div>
+                          <div><p>148 min</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tooltipText">
+                    <p style="font-size: 25px;">Hotel Love</p>
+                    <ul style="list-style-type: none; display: flex;align-items: center; ">
+                      <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                      <li style="margin: 5px;">148 min</li>
+                      <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.40</li>
+                      <li style="margin: 5px;">Drama</li>
+                      <li style="margin: 5px;">2022</li>
+                      
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vitae esse reiciendis accusantium voluptatum dolore fuga amet dignissimos iste doloremque.</p>
+                     <div style="display: flex; ">
+                      <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/hotel_love" class="text-decoration-none text-light">Watch Now</a></button>
+                      <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                  </div>
+                    
+                  </div> 
+              </div>
+  
+              <div class="child-flex-container toolText">
+                  <div class="card card-container " >
+                      <img src="./assets/awaybus1.jpg" class="imgHeight card-image-top" alt="Spider-Man_No_Way_Home">
+                      <div class="card-body">
+                          <h5 class="card-title">Away Bus</h5>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                      
+                            <div>
+                              <p>2022</p>
+                              </div>
+                            <div><p>145 min</p></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tooltipText">
+                      <p style="font-size: 23px;">Away Bus</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">145 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.40</li>
+                        <li style="margin: 5px;">Drama</li>
+                        <li style="margin: 5px;">2022</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum modi alias explicabo neque tenetur error recusandae officia ullam, aut qui!</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/away_bus" class="text-decoration-none text-light">Watch Now</a></button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+                </div>
+             
+              <div class="child-flex-container toolText" tooltipText>
+                <div class="card card-container " >
+                    <img src="./assets/tomorrow.jpg" class="imgHeight card-image-top" alt="The Tomorrow War">
+                    <div class="card-body">
+                        <h5 class="card-title">The Tomorrow War</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2021</p>
+                            </div>
+                          <div><p>135 min</p></div>
+                      </div>
+                    </div>
+                    <div class="tooltipText">
+                      <p style="font-size: 25px;">The Tomorrow War</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">135 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.40</li>
+                        <li style="margin: 5px;">Action</li>
+                        <li style="margin: 5px;">2021</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, reprehenderit neque at quam recusandae pariatur voluptas dolores id quaerat praesentium.</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+  
+                  </div>
+              </div>
+              <div class="child-flex-container toolText">
+                <div class="card card-container " >
+                    <img src="./assets/batman.jpg" class="imgHeight card-image-top" alt="The Batman">
+                    <div class="card-body">
+                        <h5 class="card-title">The Batman</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2022</p>
+                            </div>
+                          <div><p>178 min</p></div>
+                      </div>
+                    </div>
+                    <div class="tooltipText">
+                      <p style="font-size: 25px;">The Batman</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">178 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.60</li>
+                        <li style="margin: 5px;">Action</li>
+                        <li style="margin: 5px;">2022</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa illo non fugit reiciendis dolores, asperiores nemo in dolore! Dignissimos, ea.</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+                  </div>
+              </div>
+              
+              <div class="child-flex-container toolText">
+                <div class="card card-container " >
+                    <img src="./assets/shangchi.jpg" class="imgHeight card-image-top" alt="Shang-Chi and the Legend of the Ten Rings" >
+                    <div class="card-body">
+                        <h5 class="card-title">Shang-Chi</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2021</p>
+                            </div>
+                          <div><p>132 min</p></div>
+                      </div>
+                    </div>
+                    <div class="tooltipText">
+                      <p style="font-size: 25px;">Shang-Chi</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">132 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>7.60</li>
+                        <li style="margin: 5px;">Action</li>
+                        <li style="margin: 5px;">2021</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim porro ut sapiente animi neque dolor asperiores iste, soluta quasi quisquam?</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+                  </div>
+              </div>
+  
+              <div class="child-flex-container toolText">
+                <div class="card card-container " >
+                    <img src="./assets/scream.jpg" class="imgHeight card-image-top" alt="Shang-Chi and the Legend of the Ten Rings" >
+                    <div class="card-body">
+                        <h5 class="card-title">Scream</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2021</p>
+                            </div>
+                          <div><p>132 min</p></div>
+                      </div>
+                    </div>
+                    <div class="tooltipTextlast">
+                      <p style="font-size: 25px;">Scream</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">132 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>7.60</li>
+                        <li style="margin: 5px;">Action</li>
+                        <li style="margin: 5px;">2021</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt provident modi sed, omnis illo tempore. Qui necessitatibus eaque quos odio!</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+                  </div>
+              </div>
+                           
+              
+              
+              </div>
+          </div>
+      </section>
+      <div class="container-fluid">
+          <a href="http://" class="view-all">
+              View all<i class="fa-solid fa-arrow-right p-2"></i></a>
+        </div> 
+        <br>
+  
+         <!-- Section for Tv-Series -->
+         <section>
+          <a style="color: white; opacity: 0.5; text-decoration: none;" class="recommend container-fluid">Tv-Series</a>
+         
+          <br><br>
+          <div class="parent-flex-container">
+              <div class="child-flex-container toolText">
+                <div class="card card-container " >
+                    <img src="./assets/miami.jpg" class="imgHeight card-image-top" alt="CSI Miami">
+                    <div class="card-body">
+                        <h5 class="card-title">CSI Miami</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2019</p>
+                            </div>
+                          <div><p>130 min</p></div>
+                      </div>
+                    </div>
+                    <div class="tooltipText">
+                      <p style="font-size: 25px;">CSI Miami</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">130 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.10</li>
+                        <li style="margin: 5px;">Crime</li>
+                        <li style="margin: 5px;">2002</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum aperiam reiciendis labore ad natus, vero rerum corporis sint molestiae assumenda!</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+                  </div>
+              </div>
+              <div class="child-flex-container toolText">
+                <div class="card card-container " >
+                    <img src="./assets/The Girl from Plainville.jpg" class="imgHeight card-image-top" alt="The Girl from Plainville">
+                    <div class="card-body">
+                        <h5 class="card-title">The Girl...</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2022</p>
+                            </div>
+                          <div><p>43 min</p></div>
+                      </div>
+                    </div>
+                    <div class="tooltipText">
+                      <p style="font-size: 25px;">The Girl From Plainville</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">43 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>6.80</li>
+                        <li style="margin: 5px;">Drama</li>
+                        <li style="margin: 5px;">2022</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum fuga inventore autem consectetur sint error quasi eius dolorum numquam nihil?</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+                  </div>
+              </div>
+              <div class="child-flex-container toolText">
+                <div class="card card-container " >
+                    <img src="./assets/grace.jpg" class="imgHeight card-image-top" alt="Grace">
+                    <div class="card-body">
+                        <h5 class="card-title">Grace</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2021</p>
+                            </div>
+                          <div><p>129 min</p></div>
+                      </div>
+                    </div>
+                    <div class="tooltipText">
+                      <p style="font-size: 25px;">Grace</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">129 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>7.50</li>
+                        <li style="margin: 5px;">Drama</li>
+                        <li style="margin: 5px;">2021</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum fuga inventore autem consectetur sint error quasi eius dolorum numquam nihil?</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+                  </div>
+              </div>
+              <div class="child-flex-container toolText">
+                <div class="card card-container " >
+                    <img src="./assets/Ozark.jpg" class="imgHeight card-image-top" alt="Ozark">
+                    <div class="card-body">
+                        <h5 class="card-title">Ozark</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2017</p>
+                            </div>
+                          <div><p>58 min</p></div>
+                      </div>
+                    </div>
+                    <div class="tooltipText">
+                      <p style="font-size: 25px;">Ozark</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">58 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.40</li>
+                        <li style="margin: 5px;">Crime</li>
+                        <li style="margin: 5px;">2022</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum fuga inventore autem consectetur sint error quasi eius dolorum numquam nihil?</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+                  </div>
+              </div>
+  
+              <div class="child-flex-container toolText">
+                <div class="card card-container " >
+                    <img src="./assets/prison-break.jpg" class="imgHeight card-image-top" alt="Prison Break" >
+                    <div class="card-body">
+                        <h5 class="card-title">Prison Break</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2005</p>
+                            </div>
+                          <div><p>48 min</p></div>
+                      </div>
+                    </div>
+                    <div class="tooltipTextlast">
+                      <p style="font-size: 25px;">Prison Break</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">48 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>9.50</li>
+                        <li style="margin: 5px;">Crime</li>
+                        <li style="margin: 5px;">2005</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum fuga inventore autem consectetur sint error quasi eius dolorum numquam nihil?</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+                  </div>
+              </div>
+  
+  
+              <div class="child-flex-container toolText">
+                <div class="card card-container " >
+                    <img src="./assets/venom.jpg" class="imgHeight card-image-top" alt="Venom" >
+                    <div class="card-body">
+                        <h5 class="card-title">Venom</h5>
+                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                    
+                          <div>
+                            <p>2022</p>
+                            </div>
+                          <div><p>112 min</p></div>
+                      </div>
+                    </div>
+                    <div class="tooltipTextlast">
+                      <p style="font-size: 25px;">Venom</p>
+                      <ul style="list-style-type: none; display: flex;align-items: center; ">
+                        <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                        <li style="margin: 5px;">48 min</li>
+                        <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>9.50</li>
+                        <li style="margin: 5px;">Horror</li>
+                        <li style="margin: 5px;">2022</li>
+                        
+                    </ul>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum fuga inventore autem consectetur sint error quasi eius dolorum numquam nihil?</p>
+                       <div style="display: flex; ">
+                        <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                        <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+                    </div>
+                      
+                    </div> 
+                  </div>
+              </div>
+                           
+              
+              
+              </div>
+          </div>
+      </section>
+      <div class="container-fluid">
+          <a href="http://" class="view-all">
+              View all<i class="fa-solid fa-arrow-right p-2"></i></a>
+        </div>
+        <br><br>
+
+
+</section>
+
+<!-- Cards -->
+
+ <!-- Action movies container cards -->
+ <section id="action" class="container-fluid">
+  <a style="color: white; opacity: 0.5; text-decoration: none;" class="recommend container-fluid">Action Movies</a>
+  <br><br>
+   <section>
+     <!-- parent-container -->
+     <div class="parent-flex-container">
+         <!-- child container -->
+         <div class="child-flex-container toolText" >  
+             <div class="card  card-container" >
+                 <img src="./assets/black-widow.jpg" class="imgHeight card-image-top " alt="Black Widow" >
+                 <div class="card-body ">
+                     <h5 class="card-title">Black Widow</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2022</p>
+                         </div>
+                    
+                       <div><p>148 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipText">
+                 <p style="font-size: 25px;">Black Widow</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                   <li style="margin: 5px;">134 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>6.20</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2022</li>
+                   
+               </ul>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis explicabo commodi quam iusto. Ducimus architecto repudiandae rem blanditiis ex?</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/black_widow" class="text-decoration-none text-light">Watch Now</a></button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div>
+         <!-- child-container -->
+   
+         <div class="child-flex-container toolText">
+             <div class="card  card-container " >
+                 <img src="./assets/Black-Crab.jpg" class="imgHeight card-image-top" alt="Black Crab">
+                 <div class="card-body">
+                     <h5 class="card-title">Black Crab</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2022</p>
+                         </div>
+                       <div><p>158 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipText">
+                 <p style="font-size: 25px;">Black Crab</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                   <li style="margin: 5px;">158 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>7.80</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2022</li>
+                   
+               </ul>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste id facilis soluta at suscipit deleniti cupiditate enim. Libero, culpa? Unde!</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="#" class="text-decoration-none text-light">Watch Now</a></button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div>
+   
+   
+           <div class="child-flex-container toolText">
+             <div class="card card-container " >
+                 <img src="./assets/furioza.jpg" class="imgHeight card-image-top" alt="Furioza" >
+                 <div class="card-body">
+                     <h5 class="card-title">Furioza</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2021</p>
+                         </div>
+                       <div><p>152 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipText">
+                 <p style="font-size: 25px;">Furioza</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                   <li style="margin: 5px;">152 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.20</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2021</li>
+                   
+               </ul>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio suscipit quidem nemo, vel aperiam iure sequi unde laudantium nisi.</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="#" class="text-decoration-none text-light">Watch Now</a></button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div>
+   
+           <div class="child-flex-container toolText">
+             <div class="card card-container " >
+                 <img src="./assets/FIR.jpg" class="imgHeight card-image-top" alt="Spider man no way home">
+                 <div class="card-body">
+                     <h5 class="card-title">Fir</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2022</p>
+                         </div>
+                       <div><p>120 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipText">
+                 <p style="font-size: 25px;">Fir</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                   <li style="margin: 5px;">120 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>6.20</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2022</li>
+                   
+               </ul>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptas laboriosam recusandae praesentium ex magnam nulla eaque ducimus provident animi!</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="#" class="text-decoration-none text-light">Watch Now</a></button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div>
+   
+   
+           <div class="child-flex-container toolText">
+             <div class="card card-container " >
+                 <img src="./assets/restless.jpg" class="imgHeight card-image-top" alt="Restless">
+                 <div class="card-body">
+                     <h5 class="card-title">Restless</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2018</p>
+                         </div>
+                       <div><p>58 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipText">
+                 <p style="font-size: 25px;">Restless</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">4K</li>
+                   <li style="margin: 5px;">125 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>7.70</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2022</li>
+                   
+               </ul>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero accusamus provident iusto temporibus, commodi deserunt totam nesciunt fuga veniam quae.</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div> 
+   
+           <div class="child-flex-container toolText">
+             <div class="card card-container " >
+                 <img src="./assets/TheAdamProject.jpg" class="imgHeight card-image-top" alt="The The_Adam_Project" >
+                 <div class="card-body">
+                     <h5 class="card-title">The Adam Project</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2022</p>
+                         </div>
+                       <div><p>148 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipTextlast">
+                 <p style="font-size: 25px;">The Adam Project</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                   <li style="margin: 5px;">148 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.20</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2022</li>
+                   
+               </ul>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo accusamus excepturi aliquam itaque sequi impedit similique, nisi vel totam quos?</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div>
+     </div>
+     
+     <br><br>
+     <!-- parent-container -->
+   </section>
+
+   <!-- card 2 -->
+    <section>
+     <!-- parent-container -->
+     <div class="parent-flex-container">
+         <!-- child container -->
+         <div class="child-flex-container toolText" >  
+             <div class="card  card-container" >
+                 <img src="./assets/Kate.jpg" class="imgHeight card-image-top " alt="Kate" >
+                 <div class="card-body ">
+                     <h5 class="card-title">Kate</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2022</p>
+                         </div>
+                    
+                       <div><p>127 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipText">
+                 <p style="font-size: 25px;">Kate</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                   <li style="margin: 5px;">127 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.20</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2022</li>
+                   
+               </ul>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis explicabo commodi quam iusto. Ducimus architecto repudiandae rem blanditiis ex?</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="#" class="text-decoration-none text-light">Watch Now</a></button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div>
+         <!-- child-container -->
+   
+         <div class="child-flex-container toolText">
+             <div class="card  card-container " >
+                 <img src="./assets/Wonder-woman.jpg" class="imgHeight card-image-top" alt="Wonder Woman">
+                 <div class="card-body">
+                     <h5 class="card-title">Wonder Woman</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2021</p>
+                         </div>
+                       <div><p>158 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipText">
+                 <p style="font-size: 25px;">Wonder Woman</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                   <li style="margin: 5px;">158 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>7.80</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2021</li>
+                   
+               </ul>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste id facilis soluta at suscipit deleniti cupiditate enim. Libero, culpa? Unde!</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="#" class="text-decoration-none text-light">Watch Now</a></button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div>
+   
+   
+           <div class="child-flex-container toolText">
+             <div class="card card-container " >
+                 <img src="./assets/Matrix-Resurrection-Credit-IGN.webp" class="imgHeight card-image-top" alt="Aloe Vera" >
+                 <div class="card-body">
+                     <h5 class="card-title">Matrix Resurrections</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2022</p>
+                         </div>
+                       <div><p>152 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipText">
+                 <p style="font-size: 25px;">Matrix Resurrections</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                   <li style="margin: 5px;">152 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.20</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2022</li>
+                   
+               </ul>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt odio suscipit quidem nemo, vel aperiam iure sequi unde laudantium nisi.</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/matrix_resurrections" class="text-decoration-none text-light">Watch Now</a></button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div>
+   
+           <div class="child-flex-container toolText">
+             <div class="card card-container " >
+                 <img src="./assets/jupiter.jpg" class="imgHeight card-image-top" alt="Spider man no way home">
+                 <div class="card-body">
+                     <h5 class="card-title">Jupiter Ascending</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2016</p>
+                         </div>
+                       <div><p>120 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipText">
+                 <p style="font-size: 25px;">Jupiter Ascending</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                   <li style="margin: 5px;">120 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>6.20</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2016</li>
+                   
+               </ul>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptas laboriosam recusandae praesentium ex magnam nulla eaque ducimus provident animi!</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i><a href="/jupiter_ascending" class="text-decoration-none text-light">Watch Now</a></button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div>
+   
+   
+           <div class="child-flex-container toolText">
+             <div class="card card-container " >
+                 <img src="./assets/money-heist.jpg" class="imgHeight card-image-top" alt="Money Heist">
+                 <div class="card-body">
+                     <h5 class="card-title">Money Heist</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2018</p>
+                         </div>
+                       <div><p>58 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipText">
+                 <p style="font-size: 25px;">Money Heist</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">4K</li>
+                   <li style="margin: 5px;">58 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.70</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2018</li>
+                   
+               </ul>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero accusamus provident iusto temporibus, commodi deserunt totam nesciunt fuga veniam quae.</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div> 
+   
+           <div class="child-flex-container toolText">
+             <div class="card card-container " >
+                 <img src="./assets/blacklist.jpg" class="imgHeight card-image-top" alt="Blacklist" >
+                 <div class="card-body">
+                     <h5 class="card-title">Blacklist</h5>
+                   <div style="display: flex; align-items: center; justify-content: space-between;">
+                 
+                       <div>
+                         <p>2018</p>
+                         </div>
+                       <div><p>48 min</p></div>
+                   </div>
+                 </div>
+               </div>
+               <div class="tooltipTextlast">
+                 <p style="font-size: 25px;">Blacklist</p>
+                 <ul style="list-style-type: none; display: flex;align-items: center; ">
+                   <li style="margin: 5px; background-color: rgb(25, 154, 219);color: white; padding: 3px; border-radius: 5px;">HD</li>
+                   <li style="margin: 5px;">48 min</li>
+                   <li style="margin: 5px;"><i class="fa-solid fa-star p-2"></i>8.20</li>
+                   <li style="margin: 5px;">Action</li>
+                   <li style="margin: 5px;">2018</li>
+                   
+               </ul>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo accusamus excepturi aliquam itaque sequi impedit similique, nisi vel totam quos?</p>
+                  <div style="display: flex; ">
+                   <button class="btn btn-outline-info" type="button" style="margin: 5px;"><i class="fa-solid fa-play p-2"></i>Watch Now</button>
+                   <button class="btn btn-outline-light" type="button" style="margin: 5px;"><i class="fa-regular fa-heart p-2"></i>Add to list</button>
+               </div>
+                 
+               </div>
+           </div>
+     </div>
+     
+     <br><br>
+     <!-- parent-container -->
+   </section>
+
+
+ </section>
+
+
+     <br><br>
+   
+
+<!--Footer Layout-->
+<section class="customFooter" >
+  <div class="container text-center text-md-left ">
+    <div class="row text-light" >
+        <div class="col-md-4 mx-auto">
+        <div style="display: flex; align-items: center;" >
+          <h1 class="me-2 " style="color: red; font-size: 90px;text-shadow: 2px 2px rgb(16, 180, 234);">HD</h1>
+          <h5 class=" text-uppercase mt-3 mb-4 fw-bold">HD MOVIES</h5>
+        </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, laudantium?</p>
+        </div>
+        <hr class="clearfix w-100 d-md-none" />
+        <div class=" col-md-2 mx-auto">
+        <h5 class="fw-normal text-capitalize mt-3 mb-4 borderBottom">HD Movies</h5>
+    
+    <ul class="list-unstyled ">
+      <li >
+        <a class="text-decoration-none text-light borderBottom" href="/about ">About</a>
+      </li>
+      <li>
+        <a class="text-decoration-none text-light borderBottom" href="/contact ">Contact</a>
+      </li>
+      <li>
+      <a href ="/genre" class="text-decoration-none text-light borderBottom" >Genre</a>
+      </li>
+      <li>
+      
+        <a href ="/" class="text-decoration-none text-light borderBottom" >Home</a>
+      </li>
+    </ul>
+        </div>
+        <hr class="clearfix w-100 d-md-none" />
+    
+        <div class="col-md-2 mx-auto">
+        <h5 class="fw-normal text-capitalize mt-3 mb-4 borderBottom">Useful Links</h5>
+    
+    <ul class="list-unstyled">
+      <li>
+      <a href ="/SignIn" class="text-decoration-none text-light borderBottom" >Movies</a>
+      </li>
+      <li>
+        <a  class="text-decoration-none text-light borderBottom" href="# ">Tv-Shows</a>
+      </li>
+      <li>
+        <a class="text-decoration-none text-light borderBottom" href="# ">Top HD</a>
+      </li>
+      <li>
+      <a href ="/SignIn" class="text-decoration-none text-light borderBottom" >Thrillers</a>
+      </li>
+    </ul>
+        </div>
+        <hr class="clearfix w-100 d-md-none" />
+        <div class="col-md-2 mx-auto">
+        <h5 class="fw-normal text-capitalize mt-3 mb-4 borderBottom">Other Links</h5>
+    
+    <ul class="list-unstyled">
+      <li>
+      <a href ="/Latest" class="text-decoration-none text-light borderBottom" >Action Movies</a>
+      </li>
+      <li>
+      <a href ="/Popular" class="text-decoration-none text-light borderBottom" >Sci-Fi Movies</a>
+      </li>
+      <li>
+      <a href ="/Latest" class="text-decoration-none text-light borderBottom" >Thriller Movies</a>
+      </li>
+      <li>
+        <a href ="/" class="text-decoration-none text-light borderBottom" >Animation</a>
+      </li>
+    </ul>
+        </div>
+      </div>
+      </div>
+    
+      <hr />
+      <ul class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+          <h5 class="mb-1 text-light">Register for free</h5>
+        </li>
+        <li class="list-inline-item">
+        <a class="text-decoration-none text-light btn btn-info btn-rounded" onclick="document.getElementById('id02').style.display='block'" style="cursor: pointer;">Sign Up</a>
+        </li>
+      </ul>
+      <hr />
+    
+      <ul class="list-unstyled list-inline text-center fs-1 " >
+        <li class="list-inline-item p-4">
+          <a class="text-decoration-none text-light"  href ="https://www.facebook.com " target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li class="list-inline-item p-4">
+       <a class="text-decoration-none text-light"  href ="https://www.twitter.com " target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li class="list-inline-item p-4">
+        <a class="text-decoration-none text-light"  href ="https://www.whatsapp.com " target="_blank"  rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+        </li>
+        <li class="list-inline-item p-4">
+        <a  class="text-decoration-none text-light" href ="https://www.linkedin.com " target="_blank"  rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+        <li class="list-inline-item p-4">
+        <a class="text-decoration-none text-light" href ="https://www.instagram.com " target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+      
+      </ul>
+     <div class="container">
+      <a class="text-decoration-none text-light float-end " href ="#top " ><i class="bi bi-arrow-up-square-fill p-5"></i></a>
+     </div>
+      <div class="footer-copyright text-center text-light py-3">© 2022 copyright || All right reserved.
+      </div>
+    
+</section>
+  
+  
+
+
+
+    <script type="module" src="./dist/jquery.min.js"></script>
+    <script type="module" src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
